@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.toast {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 1000;
+  opacity: 0; /* Initially hidden */
+  animation: fadeInOut 5s forwards; /* Fade in and out over 5 seconds */
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}

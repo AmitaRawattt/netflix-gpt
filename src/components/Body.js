@@ -5,16 +5,9 @@ import Login from "./Login"
 
 
 const Body = () => {
-  return (
-    <div>
-        <RouterProvider router={appRouter}>
-     
-        <Outlet/>
-        </RouterProvider>
-    </div>
-  )
-}
-const appRouter=createBrowserRouter([
+ 
+
+  const appRouter=createBrowserRouter([
   
     {
       path:'/',
@@ -25,5 +18,17 @@ const appRouter=createBrowserRouter([
         element:<Browse/>
     }
 ])
+
+
+  return (
+    <div>
+        <RouterProvider router={appRouter}>
+     
+        <Outlet/>
+        </RouterProvider>
+    </div>
+  )
+}
+
 
 export default Body
