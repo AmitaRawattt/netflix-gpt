@@ -18,17 +18,17 @@ const Header = () => {
 
     useEffect(()=>{
        const unsubscribe= onAuthStateChanged(auth, (user) => {
-        console.log(".........");
+        
           if (user) {
           
             const {uid,displayName,email,photoURL} = user;
             dispatch(addUser({uid:uid,displayName:displayName,email:email,photoURL:photoURL}))
             
-            setTimeout(() => {
+            // setTimeout(() => {
                 // Navigate after showing the loader
              
                 navigate("/browse");
-              }, 2700);
+            //   }, 2700);
            
           } 
           else {
