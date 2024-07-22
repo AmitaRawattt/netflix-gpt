@@ -18,3 +18,14 @@
   90% { opacity: 1; }
   100% { opacity: 0; }
 }
+
+.scroll {
+  position: relative;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+
+.scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+

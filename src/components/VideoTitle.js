@@ -7,7 +7,7 @@ const VideoTitle = ({title, overview}) => {
         <h1 className='text-6xl font-bold'>{title}</h1>
         <h2 className="py-6 text-lg w-1/2">{overview}</h2>
         <div className="flex align-center mt-3">
-            <button className="bg-white flex px-5 py-1  text-black shadow-md rounded-sm "><span className='text-3xl self-center '>▸ </span><span className="font-bold self-center">Play</span></button>
+            <button className="bg-white flex px-5 py-1 hover:bg-opacity-80 text-black shadow-md rounded-sm "><span className='text-3xl self-center '>▸ </span><span className="font-bold self-center">Play</span></button>
             <button className=' px-5 py-1  bg-gray-700 opacity-60 ml-3  text-white rounded-sm flex '><span className='text-xl self-center'>ⓘ </span><span className="font-bold self-center">More Info</span></button>
         </div>
     </div>
