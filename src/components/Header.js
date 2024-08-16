@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {  useNavigate } from "react-router-dom";
 import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO } from "../utils/constants";
+import { toggleGptSearchView } from "../utils/gptSlice";
 
 
 
@@ -50,13 +51,16 @@ const handleSignOut=()=>{
         console.log("sign out error")
       });
 }
-
+const handleGptSearch=()=>{
+  dispatch(toggleGptSearchView());
+}
   return (
     <div className="absolute z-10 w-[100%] px-8 py-2 bg-gradient-to-b from-black flex justify-between">
-     
    
         <img src={LOGO} className="w-44" alt="logo"/>
   { userInfo && (<div className="flex align-center ">
+     <button className="py-0 px-2 mx-4 bg-purple-700 text-white w-auto h-12 self-center rounded-md"
+     onClick={handleGptSearch} >GPT Search</button>
         <img  alt=" user-icon" className="w-auto h-[45px]  mr-3 self-center" src={userInfo?.photoURL}/>
         <button onClick={handleSignOut} className="font-bold text-white">Sign Out</button>
    </div>)}
